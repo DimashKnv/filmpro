@@ -1,0 +1,63 @@
+.App{
+    display: flex;
+    flex-direction: column;
+    row-gap: 4em;
+    padding: 1em 10em;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+
+    img{
+        height: 50px;
+        width: 50px;
+    }
+    ul{
+        display: flex;
+        column-gap: 3em;
+
+    }
+}
+.filmInfo{
+    display: flex;
+    column-gap: 2em;
+justify-content: space-between;
+
+    .infoBox{
+        display: flex;
+        column-gap: 2em;
+        .descript{
+            display: flex;
+            flex-direction: column;
+
+        }
+    }
+
+    .ratingBox{
+        display: flex;
+        flex-direction: column;
+        row-gap: 1em;
+
+    }
+}
+
+.newFilms{
+    display: flex;
+    column-gap: 2em;
+    justify-content: center;
+    align-items: center;
+    img{
+        display: flex;
+
+        height: 10em;
+        width: 10em;
+        border-radius: 20%;
+    }
+}
+
+.allFilms{
+    display: flex;
+    column-gap: 2em;
+}
