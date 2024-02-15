@@ -1,29 +1,20 @@
-export function NewFilms() {
-  let allFilms = [
-    {
-      Title: "Guardians of the Galaxy Vol. 2",
-      Poster:
-        "https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg",
-    },
-    {
-      Title: "Guardians of the Galaxy Vol. 2",
-      Poster:
-        "https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg",
-    },
-    {
-      Title: "Guardians of the Galaxy Vol. 2",
-      Poster:
-        "https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg",
-    },
-    {
-      Title: "Guardians of the Galaxy Vol. 2",
-      Poster:
-        "https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg",
-    },
-  ];
+import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { getNewMovies } from "../store/reducer";
+import { useEffect } from "react";
+
+export function NewMovies() {
+  let NewFilmsArray=useSelector(state=>state.moviesReducer.newMoviesArray)
+ let dispatch=useDispatch()
+  useEffect(()=>{
+    axios.get(`https://www.omdbapi.com/?apikey=919ceac6&s=all&y=2023&type=movie&`).then((resp)=>{
+      dispatch(getNewMovies(resp.data.Search))
+        })
+  },[])
+  
   return (
     <div className="newFilms">
-      {allFilms.map((e) => {
+      {NewFilmsArray.map((e) => {
         return (
           <div>
             <img src={e.Poster} alt="filmPoster" />
