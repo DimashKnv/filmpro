@@ -9,13 +9,14 @@ import { BrowserRouter } from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    ></link>
     <BrowserRouter>
-    <Provider store={Store}>
-    <App />
-    </Provider>
+      <Provider store={Store}>
+        <App />
+      </Provider>
     </BrowserRouter>
-    
-      
   </React.StrictMode>
 );
-
