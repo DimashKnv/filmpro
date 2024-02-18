@@ -2,6 +2,7 @@
   $purp: #6d5fb4;
   $gray:#E6E6FA;
   $fontOne:"Open Sans", sans-serif;
+  $frontTwo:"Hanken Grotesk", sans-serif;
 
   body{
     padding: 0 10em;
@@ -28,14 +29,28 @@ nav {
     height: 50px;
     width: 50px;
   }
+
+  .navIcons{
+    display: flex;
+    column-gap: 1em;
+  }
   ul {
     display: flex;
     column-gap: 3em;
   }
   //SEARCH BTN STYLE
+.navSearch{
+  width: 25em;
+  height: 3em;
+  input{
+    width: 25em;
+    height: 2em;
+  }
+}
   #searchBtn {
-    height: 0.5em;
-    width: 0.5em;
+   
+    height: 2em;
+    width: 2em;
   }
 }
 
@@ -90,4 +105,17 @@ nav {
   background: $purp;
   border-radius: 2em;
   padding: 2em;
+}
+
+
+
+//Login and Registration page
+.loginPage{
+
+ 
+  height: 30em;
+
+  form{
+
+  }
 }

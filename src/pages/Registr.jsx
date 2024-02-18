@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
-import { Login } from "./Login"
+
 
 export function Registr(){
-    return <div>
+    return <div className="registrationPage">
 <form action="">
     <input type="text" placeholder="Your login"/>
     <input type="text" placeholder="Your password"/>
@@ -10,7 +10,8 @@ export function Registr(){
     <button>Registrate</button>
 </form>
 
-<h3>If you already have an account, you can <Link to="/login">Sign up</Link></h3>
+<h3>If you already have an account, you can <Link to="/login">Sign in</Link></h3>
+<h4><Link to="/">Back to home page</Link></h4>
 
     </div>
 }

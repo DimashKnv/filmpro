@@ -12,7 +12,7 @@ export function Search() {
     })
   }
   return (
-    <>
+    <div>
       <input
         onChange={(e) => {
           setSearchArray(e.target.value);
@@ -28,6 +28,6 @@ export function Search() {
       >
         <img src={searchPng} alt="" id="searchBtn" />
       </button>
-    </>
+    </div>
   );
 }

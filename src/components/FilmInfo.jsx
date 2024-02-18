@@ -61,12 +61,13 @@ export function FilmInfo() {
         <img src={selectedF && selectedF.Poster} alt="filmPoster" />
         <div className="descript">
           <h3>{selectedF && selectedF.Title}</h3>
-          <p>Runtime:140min</p>
-          <p>Year:2020</p>
-          <p>Director:JamesGunn</p>
-          <p>Actors:BradPitt</p>
-          <p>Plot:Lorem21321312312</p>
-          <p>Genre:Horror</p>
+          <p>{selectedF && selectedF.Year}</p>
+          <p>{selectedF && selectedF.Runtime}</p>
+          <p>{selectedF && selectedF.Genre}</p>
+          <p>{selectedF && selectedF.Director}</p>
+          <p>{selectedF && selectedF.Actors}</p>
+          <p>{selectedF && selectedF.Plot}</p>
+          
         </div>
       </div>
       <div className="ratingBox">
