@@ -14,11 +14,11 @@ export function NewMovies() {
   
   return (
     <div className="newFilms">
-      {NewFilmsArray.map((e) => {
+      {NewFilmsArray.map((obj) => {
         return (
-          <div>
-            <img src={e.Poster} alt="filmPoster" />
-            <p>{e.Title}</p>
+          <div key={obj.imdbID} className="newFilmsPiece">
+            <img src={obj.Poster} alt="filmPoster" />
+            <p>{obj.Title}</p>
           </div>
         );
       })}

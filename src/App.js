@@ -23,21 +23,28 @@ function App() {
 
   return (
     <div className="App">
-      
       <Routes>
         <Route
           path="/"
           element={
-            <>
+            <div className="mainBox">
               {" "}
               <Navigation />
               <FilmInfo />
               <NewMovies />
               <AllFilms />
-            </>
+            </div>
           }
         ></Route>
-        <Route path="/favorites" element={<><Navigation></Navigation><Fav></Fav></>}></Route>
+        <Route
+          path="/favorites"
+          element={
+            <div className="mainBox">
+              <Navigation></Navigation>
+              <Fav></Fav>
+            </div>
+          }
+        ></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/registration" element={<Registr></Registr>}></Route>
       </Routes>
@@ -46,6 +53,5 @@ function App() {
 }
 
 export default App;
-
 
 //TODO:поменять нав ul на link +img; filminfo доделать; лого,иконки; подумать над favorite.

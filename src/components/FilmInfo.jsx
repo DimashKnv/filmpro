@@ -50,7 +50,6 @@ export function FilmInfo() {
     axios
       .get(`https://www.omdbapi.com/?i=${SelectedFilm.imdbID}&apikey=919ceac6`)
       .then((resp) => {
-        console.log(SelectedFilm);
         setSelectedF(resp.data);
       });
   }, [SelectedFilm]);
@@ -67,14 +66,12 @@ export function FilmInfo() {
           <p>{selectedF && selectedF.Director}</p>
           <p>{selectedF && selectedF.Actors}</p>
           <p>{selectedF && selectedF.Plot}</p>
-          
         </div>
       </div>
       <div className="ratingBox">
         {selectedF &&
           selectedF.Ratings &&
           selectedF.Ratings.map((rate) => {
-            console.log(selectedF);
             return (
               <div key={rate.Source}>
                 <h3>{rate.Source}</h3>

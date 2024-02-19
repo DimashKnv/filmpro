@@ -1,36 +1,35 @@
+$purp: #6d5fb4;
+$gray: #e6e6fa;
+$fontOne: "Open Sans", sans-serif;
+$frontTwo: "Hanken Grotesk", sans-serif;
 
-  $purp: #6d5fb4;
-  $gray:#E6E6FA;
-  $fontOne:"Open Sans", sans-serif;
-  $frontTwo:"Hanken Grotesk", sans-serif;
+body {
+  padding: 0 10em;
+}
 
-  body{
-    padding: 0 10em;
-  }
-
-.App {
+.mainBox {
   display: flex;
   flex-direction: column;
   row-gap: 4em;
   padding: 0 1em;
   border: $purp;
-  border-radius:0.5%;
+  border-radius: 0.5%;
   font-family: $fontOne;
- 
-  
+
   background: $gray;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   img {
     height: 50px;
     width: 50px;
   }
 
-  .navIcons{
+  .navIcons {
     display: flex;
     column-gap: 1em;
   }
@@ -39,19 +38,25 @@ nav {
     column-gap: 3em;
   }
   //SEARCH BTN STYLE
-.navSearch{
-  width: 25em;
-  height: 3em;
-  input{
+  .navSearch {
     width: 25em;
-    height: 2em;
+    height: 3em;
+    input {
+      width: 25em;
+      height: 2em;
+      
+    }
   }
-}
   #searchBtn {
-   
     height: 2em;
     width: 2em;
   }
+  
+}
+
+.searchContent{
+  display: flex;
+  align-items: center;
 }
 
 .filmInfo {
@@ -95,6 +100,13 @@ nav {
     border-radius: 20%;
   }
 }
+.newFilmsPiece{
+  display: flex;
+  flex-direction: column;
+  height: 15em;
+  
+  justify-content: space-between;
+}
 
 .allFilms {
   display: flex;
@@ -107,15 +119,152 @@ nav {
   padding: 2em;
 }
 
-
-
 //Login and Registration page
-.loginPage{
-
- 
+.loginPage {
+  display: flex;
+  color: $gray;
+  font-family: $fontOne;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3em 24em;
+  row-gap: 1em;
   height: 30em;
-
-  form{
-
+  width: 30em;
+  background: $purp;
+  border-radius: 1em;
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.4em;
+    height: 100%;
+    width: 100%;
+    padding: 10em 10em;
+    input {
+      height: 100%;
+      width: 80%;
+      padding: 1em 1em;
+      border-radius: 0.5em;
+    }
+    button {
+      height: 100%;
+      width: 87%;
+      border-radius: 1em;
+      padding: 1em 1em;
+      background-color: rgb(10, 226, 10);
+    }
   }
+}
+
+.formLinksLog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: $frontTwo;
+  row-gap: 0.1em;
+  text-decoration: none;
+ h4{
+  margin: 0;
+a{
+  text-decoration: none;
+}
+ }
+}
+//reg
+.registrationPage {
+  display: flex;
+  color: $gray;
+  font-family: $fontOne;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3em 24em;
+  row-gap: 1em;
+  height: 30em;
+  width: 30em;
+  background: $purp;
+  border-radius: 1em;
+  h3{
+    margin: 0;
+  }
+  form { display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.4em;
+    height: 100%;
+    width: 100%;
+    padding: 10em 10em;
+    input {
+      height: 100%;
+      width: 80%;
+      padding: 1em 1em;
+      border-radius: 0.5em;
+    }
+    button {
+      height: 100%;
+      width: 87%;
+      border-radius: 1em;
+      padding: 1em 1em;
+      background-color: rgb(10, 226, 10);
+    }
+  }
+}
+.formLinks{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: $frontTwo;
+  row-gap: 0.1em;
+  text-decoration: none;
+ h4{
+  margin: 0;
+a{
+  text-decoration: none;
+}
+ }
+}
+
+
+// fav???????????????????
+.favBox{
+  display: flex;
+  flex-direction: column;
+}
+
+.favContentArray{
+  display: flex;
+  flex-direction: row;
+  column-gap: 2em;
+ 
+  padding: 0 1em;
+  border: $purp;
+  border-radius: 0.5%;
+  font-family: $fontOne;
+  background: $gray;
+  flex-wrap: wrap;
+  
+  img{
+    width: 100%;
+    height: 100%;
+  }
+  button{
+    width: 20%;
+  }
+}
+
+.favContent{
+  margin-bottom:6em ;
+}
+
+
+
+.sortUtil{
+  display: flex;
+  flex-direction: row;
+  column-gap: 1em;
 }

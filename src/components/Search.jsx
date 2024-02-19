@@ -4,15 +4,17 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { getAllMovies } from "../store/reducer";
 export function Search() {
-    let dispatch=useDispatch()
+  let dispatch = useDispatch();
   let [searchArray, setSearchArray] = useState("");
   function handleSearch() {
-    axios.get(`https://www.omdbapi.com/?apikey=919ceac6&s=${searchArray}`).then((resp)=>{
-        dispatch(getAllMovies(resp.data.Search))
-    })
+    axios
+      .get(`https://www.omdbapi.com/?apikey=919ceac6&s=${searchArray}`)
+      .then((resp) => {
+        dispatch(getAllMovies(resp.data.Search));
+      });
   }
   return (
-    <div>
+    <div className="searchContent">
       <input
         onChange={(e) => {
           setSearchArray(e.target.value);
@@ -23,7 +25,7 @@ export function Search() {
       />
       <button
         onClick={() => {
-          handleSearch()
+          handleSearch();
         }}
       >
         <img src={searchPng} alt="" id="searchBtn" />
