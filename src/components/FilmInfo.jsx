@@ -59,13 +59,13 @@ export function FilmInfo() {
       <div className="infoBox">
         <img src={selectedF && selectedF.Poster} alt="filmPoster" />
         <div className="descript">
-          <h3>{selectedF && selectedF.Title}</h3>
-          <p>{selectedF && selectedF.Year}</p>
-          <p>{selectedF && selectedF.Runtime}</p>
-          <p>{selectedF && selectedF.Genre}</p>
-          <p>{selectedF && selectedF.Director}</p>
-          <p>{selectedF && selectedF.Actors}</p>
-          <p>{selectedF && selectedF.Plot}</p>
+          <h3>Name: {selectedF && selectedF.Title}</h3>
+          <p>Year: {selectedF && selectedF.Year}</p>
+          <p>Runtime: {selectedF && selectedF.Runtime}</p>
+          <p>Genre: {selectedF && selectedF.Genre}</p>
+          <p>Director: {selectedF && selectedF.Director}</p>
+          <p>Actors: {selectedF && selectedF.Actors}</p>
+          <p>Plot: {selectedF && selectedF.Plot}</p>
         </div>
       </div>
       <div className="ratingBox">

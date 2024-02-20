@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
 import MainPagePng from "../assets/MainPageTwo.png";
-import AccountPng from "../assets/Account.png";
+import AccountPng from "../assets/Accimage.png";
 import LogoPng from "../assets/MainLogo.png";
-import FavoritePng from "../assets/FavPng.png";
+import FavoritePng from "../assets/favimage.png";
 
 import { Search } from "./Search";
 

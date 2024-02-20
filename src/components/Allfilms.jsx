@@ -11,15 +11,7 @@ export function AllFilms() {
   let movies = useSelector((state) => state.moviesReducer.moviesArray);
   let dispatch = useDispatch();
   let favArray = useSelector((state) => state.moviesReducer.favMovies);
-  // let [isInFav, setIsInFav] = useState(false);
-
-  // function toggleIsinFav(obj) {
-  //   setIsInFav(
-  //     favArray.some((movie) => {
-  //       return obj.Title === movie.Title;
-  //     })
-  //   );
-  // }
+  
   let sortedUp = [...movies].sort((a, b) => {
     return a.Year - b.Year;
   });
@@ -34,14 +26,15 @@ export function AllFilms() {
             dispatch(getAllMovies(sortedUp));
           }}
         >
-          sort by year ascending
+          year ⇧
+
         </p>
         <p
           onClick={() => {
             dispatch(getAllMovies(sortedDown));
           }}
         >
-          sort by year descending
+          year ⇩
         </p>
       </div>
       <div className="allFilms">
@@ -51,19 +44,19 @@ export function AllFilms() {
             return obj.Title === movie.Title;
           });
           return (
-            <div
+            <div className="allFilmsPiece"
               key={movie.imdbID}
               onClick={() => {
                 dispatch(addSelectedMovie(movie));
               }}
             >
-              <img src={movie.Poster} alt="" />
+              <img id="allFilmsPoster" src={movie.Poster} alt="" />
               <p>{movie.Year}</p>
               <p>{movie.Title}</p>
               <button
                 onClick={() => {
                   dispatch(isInFav2 ? removeFav(movie) : addFav(movie));
-                  // toggleIsinFav(movie);
+              
                 }}
               >
                 {isInFav2 ? "Dislike" : "Like"}

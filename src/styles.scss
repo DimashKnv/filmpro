@@ -1,7 +1,7 @@
 $purp: #6d5fb4;
 $gray: #e6e6fa;
 $fontOne: "Open Sans", sans-serif;
-$frontTwo: "Hanken Grotesk", sans-serif;
+$fontTwo: "Hanken Grotesk", sans-serif;
 
 body {
   padding: 0 10em;
@@ -10,13 +10,23 @@ body {
 .mainBox {
   display: flex;
   flex-direction: column;
-  row-gap: 4em;
+  row-gap: 1em;
   padding: 0 1em;
   border: $purp;
   border-radius: 0.5%;
   font-family: $fontOne;
 
   background: $gray;
+}
+
+.mainBoxHs{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: $fontTwo;
+  font-size: 2em;
 }
 
 nav {
@@ -44,17 +54,15 @@ nav {
     input {
       width: 25em;
       height: 2em;
-      
     }
   }
   #searchBtn {
     height: 2em;
     width: 2em;
   }
-  
 }
 
-.searchContent{
+.searchContent {
   display: flex;
   align-items: center;
 }
@@ -66,6 +74,7 @@ nav {
   background: $purp;
   border-radius: 2em;
   padding: 1em 2em 1em 3em;
+  font-family: $fontTwo;
 
   .infoBox {
     display: flex;
@@ -92,6 +101,7 @@ nav {
   background: $purp;
   border-radius: 2em;
   padding: 1em;
+  font-family: $fontTwo;
   img {
     display: flex;
 
@@ -100,11 +110,11 @@ nav {
     border-radius: 20%;
   }
 }
-.newFilmsPiece{
+.newFilmsPiece {
   display: flex;
   flex-direction: column;
   height: 15em;
-  
+
   justify-content: space-between;
 }
 
@@ -117,6 +127,19 @@ nav {
   background: $purp;
   border-radius: 2em;
   padding: 2em;
+  
+  p{
+    margin: 0.5em;
+  }
+}
+
+#allFilmsPoster{
+  height: 30em;
+  width: 20em;
+}
+.allFilmsPiece{
+ 
+  padding-bottom: 1em;
 }
 
 //Login and Registration page
@@ -163,15 +186,15 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: $frontTwo;
+  font-family: $fontTwo;
   row-gap: 0.1em;
   text-decoration: none;
- h4{
-  margin: 0;
-a{
-  text-decoration: none;
-}
- }
+  h4 {
+    margin: 0;
+    a {
+      text-decoration: none;
+    }
+  }
 }
 //reg
 .registrationPage {
@@ -187,10 +210,12 @@ a{
   width: 30em;
   background: $purp;
   border-radius: 1em;
-  h3{
+  
+  h3 {
     margin: 0;
   }
-  form { display: flex;
+  form {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -209,62 +234,60 @@ a{
       width: 87%;
       border-radius: 1em;
       padding: 1em 1em;
-      background-color: rgb(10, 226, 10);
+      background-color: rgb(208, 255, 0);
     }
   }
 }
-.formLinks{
+.formLinks {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: $frontTwo;
+  font-family: $fontTwo;
   row-gap: 0.1em;
   text-decoration: none;
- h4{
-  margin: 0;
-a{
-  text-decoration: none;
-}
- }
+  h4 {
+    margin: 0;
+    a {
+      text-decoration: none;
+    }
+  }
 }
 
-
-// fav???????????????????
-.favBox{
+.favBox {
   display: flex;
   flex-direction: column;
 }
 
-.favContentArray{
+.favContentArray {
   display: flex;
   flex-direction: row;
   column-gap: 2em;
- 
+
+  font-family: $fontTwo;
   padding: 0 1em;
   border: $purp;
   border-radius: 0.5%;
   font-family: $fontOne;
   background: $gray;
   flex-wrap: wrap;
-  
-  img{
+
+  img {
     width: 100%;
     height: 100%;
   }
-  button{
+  button {
     width: 20%;
   }
 }
 
-.favContent{
-  margin-bottom:6em ;
+.favContent {
+  margin-bottom: 6em;
 }
 
-
-
-.sortUtil{
+.sortUtil {
   display: flex;
   flex-direction: row;
   column-gap: 1em;
+  cursor: pointer;
 }

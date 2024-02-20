@@ -14,7 +14,6 @@ export function Login() {
         onSubmit={(object) => {
           object.preventDefault();
           axios.post("https://jsonplaceholder.typicode.com/users",{email:loginValue,password:passValue}).then((resp)=>{
-            console.log(resp)
             alert("Congratulations,you are verifyed")
             navigate("/")
           })

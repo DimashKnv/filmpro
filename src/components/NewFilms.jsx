@@ -17,7 +17,7 @@ export function NewMovies() {
       {NewFilmsArray.map((obj) => {
         return (
           <div key={obj.imdbID} className="newFilmsPiece">
-            <img src={obj.Poster} alt="filmPoster" />
+            <img src={obj.Poster} alt="filmPoster"/>
             <p>{obj.Title}</p>
           </div>
         );

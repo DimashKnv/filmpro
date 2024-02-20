@@ -3,7 +3,7 @@ import { Navigation } from "./components/Navigation";
 import { FilmInfo } from "./components/FilmInfo";
 import { NewMovies } from "./components/NewFilms";
 import { AllFilms } from "./components/Allfilms";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { getAllMovies } from "./store/reducer";
@@ -31,7 +31,9 @@ function App() {
               {" "}
               <Navigation />
               <FilmInfo />
+              <div className="mainBoxHs">New Movies</div>
               <NewMovies />
+              <div className="mainBoxHs">All Films</div>
               <AllFilms />
             </div>
           }
